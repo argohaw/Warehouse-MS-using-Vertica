@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Item</title>
+    <link rel="stylesheet" href="elete-item.css" />
+</head>
+<body>
+<h2>Delete Item</h2>
+<form th:action="@{/items/delete}" method="post">
+    <div>
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id">
+    </div>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+</form>
+<p th:text="${message}"></p>
+</body>
+</html>
